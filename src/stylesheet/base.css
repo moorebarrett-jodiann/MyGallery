@@ -1,0 +1,269 @@
+@import "./reset.css";
+
+:root {
+    /*greyscale*/
+    --app-dark-bg:#131313;
+    --app-light-bg:#e0e0e0;
+    --app-dark-grey-bg:#2c2d33;
+    --app-light-grey:#adadb0;
+    --app-white:#f1f2f3;
+    --app-black:#0b0b0b;
+    --app-light-text-color: #f4f6f8;
+    --app-dark-text-color: #1c1c1c;
+    --app-grey-text-color: #343434;
+    
+    /*colors*/
+    --app-rich-black:#0a192f;
+    --app-midnight-green:#124559;
+    --app-theme-green: #04c2c9;
+    --app-airforce-blue:#598392;
+    --app-dark-ash: #3C415C;
+    --app-ash-grey:#AEC3B0;
+    --app-ash-grey-light:rgb(174, 195, 176, 0.5);
+    --app-beige:#EFF6E0;
+    --app-dark-beige: #B4A5A5;
+    --app-melon: #9f5264;
+    --app-melon-tint: rgb(159, 82, 100);
+    --app-melon-light: rgba(159, 82, 100, 0.1);
+    --app-light-purple-tint : rgb(207, 77, 206, 0.4);
+    --app-dark-purple-tint : rgba(207, 77, 207, 0.582);
+    --app-light-purple : #FF10F0;
+    /* --app-light-purple : #CF4DCE; */
+    --app-medium-purple : #2f1338;
+    --app-dark-purple : #0e0715;
+    --app-purple : #1b0c25;
+
+    /* Curabit Color Palette */
+    --app-cur-light-blue: #53b7ea;
+    --app-cur-med-blue: #367ab9;
+    --app-cur-dark-blue: #3a589a;
+    --app-cur-med-grey: #58677b;
+    --app-cur-dark-grey: ##2e3e53;
+    
+    --app-dark-navy: #020c1b;
+    --app-navy: #0a192f;
+    --app-light-navy: #112240;
+    --app-lightest-navy: #233554;
+    --app-navy-shadow: rgba(2,12,27,0.7);
+    --app-dark-slate: #495670;
+    --app-slate: #8892b0;
+    --app-light-slate: #a8b2d1;
+    --app-lightest-slate: #ccd6f6;
+    
+    --app-pink:#E53F71;
+    --app-orange: #F89F5B;
+    --app-green: #18bfa1;
+    --app-blue: #33c0df;
+    --app-green-tint: rgba(100,255,218,0.1);
+
+    /*font-settings*/
+    --app-p-font-xxlarge: 24px;
+    --app-p-font-xlarge: 20px;
+    --app-p-font-large: 16px;
+    --app-p-font-regular: 14px;
+    --app-p-font-small: 12px;
+    --app-p-font-xsmall: 10px;
+    --app-p-font-xxsmall: 8px;
+    
+    --app-mono-font: 'Fira Code', monospace;
+    
+    --app-h1: 45px;
+    --app-h2: 35px;
+    --app-h3: 25px;
+    --app-h4: 15px;
+    --app-letter-spacing: 0.2px;
+    --app-header-line-height: 70px;
+    --app-text-line-height: 50px;
+    
+    /*transitions and settings*/
+    --app-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --app-btn-padding: 8px 15px;
+    --app-border-radius: 4px;
+    --app-letter-spacing: 0.2px;
+    --app-main-transition: all 0.4s ease-in-out;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0px;
+}
+
+section.about, section.portfolio, section.experience, section.contact {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 100px 0px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--app-purple);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--app-slate);
+    border: 3px solid var(--app-purple);
+    border-radius: 10px;
+}
+
+.content main {
+    min-height: calc(100vh - 80px - 90px);
+    counter-reset: section;
+}
+
+.main-page {
+    background-color: var(--app-purple);
+    position: relative;
+    z-index: 0;
+}
+
+.container {
+    width: min(100% - 7vw, 2560px);
+    margin-inline: auto;
+}
+
+@media only screen and (min-width: 1080px) { 
+    .content {
+        padding: 0px 100px;
+    }
+}
+
+@media only screen and (max-width: 1079px) {
+    .content {
+        padding: 0px 25px;
+    }
+}
+
+.flexbox {
+    display: flex;
+}
+
+.cta {
+    cursor: pointer;
+    border: 1px solid var(--app-light-purple);
+    padding: var(--app-btn-padding);
+    text-transform: capitalize;
+    transition: all 0.25s ease-in-out;
+    border-radius: var(--app-border-radius);
+    background-color: transparent;
+    color: var(--app-light-purple);
+}
+
+.cta a {
+    text-decoration: none;
+    color: var(--app-light-purple) !important;
+    font-size: var(--app-p-font-regular);
+}
+
+.cta:hover {
+    background-color: rgba(207, 77, 207, 0.226);
+}
+
+.numbered-heading:not(.action) {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    white-space: nowrap;
+    color: var(--app-lightest-slate);
+}
+
+.numbered-heading.action {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--app-light-purple);
+    font-family: var(--app-mono-font);
+    font-size: var(--app-p-font-regular);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.numbered-heading::before {
+    position: relative;
+    counter-increment: section;
+    content: "0" counter(section, decimal) ".";
+    margin-right: 10px;
+    color: var(--app-light-purple);
+    font-weight: 400;
+    font-family: var(--app-mono-font);
+    font-size: var(--app-p-font-xlarge);
+}
+
+.numbered-heading:not(.action)::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 0.3px;
+    margin-left: 20px;
+    background-color: var(--app-light-purple);
+}
+
+@media only screen and (min-width: 923px) {     
+    .numbered-heading:not(.action)::after {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 922px) {
+    .numbered-heading:not(.action)::after {
+        width: 300px;
+    }
+}
+
+.scroll-btn {       
+    opacity: 0;   
+    width: 40px;
+    height: 40px;
+    color: var(--app-lightest-slate);
+    background-color: var(--app-light-purple);
+    position: fixed;
+    bottom: 7%;
+    right: 4%;    
+    border: 2px solid var(--app-lightest-slate);
+    border-radius: 50%; 
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.scroll-btn.show {      
+    opacity: 1;  
+    transition: opacity 1s, transform 1s;     
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.scroll-btn.show:hover {      
+    background-color: rgba(207, 77, 207, 0.226);   
+    color: var(--app-light-purple);
+}
+
+span.emp {
+    color: var(--app-light-purple);
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+}
+
+span.emp::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--app-light-purple);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+span.emp:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
