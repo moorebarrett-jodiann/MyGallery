@@ -1,6 +1,21 @@
-function Gallery() {
+import GalleryCards from "./GalleryCards";
+
+function Gallery(props) {
+
   return (
-    <div>Gallery</div>
+    <>
+      <section className="gallery-container" id="gallery">
+        <div className="section-heading">
+          <h2>Gallery</h2>
+          <hr></hr>
+        </div>
+        <div className="gallery-grid">
+          <GalleryCards
+            items={props.images}
+          />
+        </div>
+      </section>
+    </>
   )
 }
 

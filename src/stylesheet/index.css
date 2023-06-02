@@ -1,1 +1,277 @@
 @import "./base.css";
+@import "./base.css";
+
+/* ======= HEADER ========*/
+header .flexbox {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-container {
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+header .logo-container h2 {
+    font-size: var(--app-p-font-xlarge);
+    color: var(--app-cur-light-blue);
+    margin: auto;
+}
+
+header .logo-container:hover {
+    cursor: pointer;
+}
+
+header nav {
+    height: 100%;
+}
+
+/* Show reular nav menu when screen width is 923px and above */
+@media only screen and (min-width: 923px) { 
+
+    .burger-menu {
+        visibility: hidden;
+        display: none
+    }
+    
+    .burger-menu i {
+        visibility: hidden;
+        display: none
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    nav ul li {
+        visibility: visible;
+        display: inline;
+    }
+
+    nav ul li + li {
+        margin-left: 30px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: var(--app-letter-spacing);
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--app-dark-text-color);
+        position: relative;
+        transition: var(--app-transition);
+    }
+
+    nav ul li.default a {
+        color: var(--app-cur-light-blue);
+    }
+
+    nav ul li a:hover {
+        color: var(--app-cur-light-blue);
+    }
+}
+
+
+/* Show hamburger icon when screen width is below 922px */
+@media only screen and (max-width: 922px) {
+    nav {
+        visibility: hidden;
+        display: none;
+    }
+    
+    .burger-menu {
+        visibility: visible;
+        display: inline;
+        color: var(--app-dark-text-color);
+        font-size: 18px;
+        transition: var(--app-transition);
+    }
+    
+    .burger-menu:hover {
+        color: var(--app-cur-light-blue);
+        cursor: pointer;
+    }
+}
+
+/* ======= BANNER ========*/
+.banner-container .banner-info {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+}
+
+.banner-container .banner-info .main-text p {
+    color: var(--app-white);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.banner-container .banner-info .main-text p span {
+    color: var(--app-cur-light-blue);
+}
+
+.banner-container .banner-info .hr {
+    background-color: rgba(155, 172, 156, 0.397);
+    height: 0.2px;
+    width: 80%;
+    margin: 20px 0px;
+}
+
+.banner-container .banner-info .sub-text p {
+    color: var(--app-light-text-color);
+    margin: 20px 0px;
+}
+
+.banner-container .banner-info button {
+    font-size: var(--app-p-font-large);
+    padding: 10px 20px;
+    border-radius: var(--app-border-radius);
+    margin: 20px 0px;
+    transition: var(--app-transition);
+}
+
+.banner-container .banner-info button + button {
+    margin-left: 10px;
+}
+
+.banner-container .banner-info button.primary {
+    border: 1px solid transparent;
+    background-color: var(--app-ash-grey);
+    color: var(--app-dark-text-color);
+}
+
+.banner-container .banner-info button.secondary {
+    border: 1px solid var(--app-ash-grey);
+    background: transparent;
+    color: var(--app-ash-grey);
+}
+
+.banner-container .banner-info button.primary:hover {
+    border: 1px solid var(--app-ash-grey-light);
+    background: var(--app-ash-grey-med);
+    color: var(--app-light-text-color);
+    cursor: pointer;
+}
+
+.banner-container .banner-info button.secondary:hover {
+    border: 1px solid var(--app-ash-grey);
+    background: rgba(145, 160, 146, 0.7);
+    color: var(--app-light-text-color);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1080px) {  
+    .banner-container {
+        padding: 0px 60px;
+    }
+
+    .banner-container .banner-info .main-text p {
+        font-size: var(--app-h1);
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 1079px) {
+    .banner-container .banner-info .main-text p {
+        font-size: var(--app-h2);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .banner-container .banner-info .main-text p {
+        font-size: var(--app-h3);
+    }
+}
+
+/* ======= GALLERY ========*/
+.gallery-container .section-heading {
+    width: 100%;
+    margin-bottom: 40px;
+    display: grid;
+    place-items: center;
+}
+
+.gallery-container .section-heading hr {
+    background-color: rgba(224, 224, 224, 0.658);
+    height: 0.2px;
+    width: 50%;
+    margin: 20px 0px;
+}
+
+@media only screen and (min-width: 1080px) {   
+    .gallery-container .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2em;
+        margin-bottom: 20px;
+    }
+
+    .gallery-container .section-heading h2 {
+        font-size: var(--app-h3);
+    }
+}
+
+@media only screen and (max-width: 1079px) {
+    .gallery-container .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+        margin-bottom: 20px;
+    }
+
+    .gallery-container .section-heading h2 {
+        font-size: var(--app-h3);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .gallery-container .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+    }
+
+    .gallery-container .section-heading h2 {
+        font-size: var(--app-h4);
+    }
+}
+
+.gallery-container .gallery-grid .img-card {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--app-border-radius);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    transition: var(--app-transition);
+}
+
+.gallery-container .gallery-grid .img-card:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.gallery-container .gallery-grid .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ======= FOOTER ========*/
+footer .footer-info {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+footer .footer-info p {
+    font-size: var(--app-p-font-large);
+    color: var(--app-light-text-color);
+}
