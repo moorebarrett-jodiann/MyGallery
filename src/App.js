@@ -14,37 +14,21 @@ function App() {
   
   const imageArray = [
 		{
-      /**
-       * Photo by <a href="https://unsplash.com/@the_jenn_wood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jenn Wood</a> 
-       * on <a href="https://unsplash.com/photos/7sma23m8eJY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-       */
       id: 1,
 			src: image1,
       alt: "img1"
 		},
 		{
-      /**
-       * Photo by <a href="https://unsplash.com/@the_jenn_wood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jenn Wood</a> 
-       * on <a href="https://unsplash.com/photos/7sma23m8eJY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-       */
       id: 2,
 			src: image2,
       alt: "img2"
 		},
 		{
-      /**
-       * Photo by <a href="https://unsplash.com/@the_jenn_wood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jenn Wood</a> 
-       * on <a href="https://unsplash.com/photos/7sma23m8eJY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-       */
       id: 3,
 			src: image3,
       alt: "img3"
 		},
 		{
-      /**
-       * Photo by <a href="https://unsplash.com/@the_jenn_wood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jenn Wood</a> 
-       * on <a href="https://unsplash.com/photos/7sma23m8eJY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-       */
       id: 4,
 			src: image4,
       alt: "img4"
