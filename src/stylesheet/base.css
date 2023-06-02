@@ -93,7 +93,7 @@ body {
 .container {
     width: min(100% - 10vw, 1280px);
     margin-inline: auto;
-    min-width: 470px;
+    min-width: 350px;
 }
 
 header {
@@ -102,7 +102,7 @@ header {
     background-color: var(--app-white);
     display: grid;
     align-items: center;
-    min-width: 470px;
+    min-width: 350px;
 }
 
 main {
