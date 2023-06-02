@@ -14,7 +14,7 @@ header .logo-container {
 }
 
 header .logo-container h2 {
-    font-size: var(--app-p-font-xlarge);
+    font-size: var(--app-h4);
     color: var(--app-cur-light-blue);
     margin: auto;
 }

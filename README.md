@@ -1,3 +1,20 @@
+<h1 align="center" style="color:#53b7ea">MyGallery</h1>
+
+### Table of contents
+- :camera: [View Gallery](https://moorebarrett-jodiann.github.io/MyGallery/) :camera:
+- [Project Description](#description)
+- [Getting Started](#getting-started-with-create-react-app)
+
+### Description
+
+Simple, mobile-first gallery website, built using the following technologies:
+- HTML
+- CSS
+- React
+- Node
+
+![MyGalley](./src/images/screenshots/home.png?raw=true "MyGallery")
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
