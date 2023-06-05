@@ -3,7 +3,6 @@ import Button from './Button';
 function Banner() {
 
   let isPrimary = true;
-  let isSecondary = true;
 
   return (
     <>
@@ -22,7 +21,6 @@ function Banner() {
             </div>
             <Button 
               isPrimary={isPrimary}
-              isSecondary={isSecondary}
             />
           </div>
       </section>
